@@ -1,5 +1,7 @@
 package Aims;
 
+import java.util.ArrayList;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -13,8 +15,16 @@ public class DigitalVideoDisc {
         this.length=0;
         this.cost=0;
     }
+    public DigitalVideoDisc(String title,String category,String director,int length,float cost){
+        this.title=title;
+        this.category=category;
+        this.director=director;
+        this.length=length;
+        this.cost=cost;
+    }
 
     public String getTitle() {
+
         return this.title;
     }
     public String play(){
@@ -28,11 +38,12 @@ public class DigitalVideoDisc {
         return cost;
     }
     public String getInfo(){
-        return this.title+" "+this.director+"\n"+"Category: "+this.category+"+\n"+this.length+"\n"+this.cost;
+        return this.title+" "+this.director+"\n"+"Category: "+this.category+"\n"+"Length: "+this.length+"\n"+"Price: "+this.cost+"\n";
     }
 
     public String getCategory() {
         return category;
     }
+
 
 }

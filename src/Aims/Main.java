@@ -2,7 +2,6 @@ package Aims;
 
 import java.util.ArrayList;
 
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,10 +14,9 @@ public class Main {
         data.add(db.disc5);
         data.add(db.disc6);
         Cart cart = new Cart();
-        Scanner sc=new Scanner(System.in);
-        //String searchKeyword=sc.next();
-        String searchKeyword="Maniac";
-        db.searchByKeyword(data,searchKeyword);
+        String searchKeyword="KPOP";
+        System.out.println(db.searchByCategory(data,searchKeyword));
+        System.out.println(db.searchByPrice(data,5,20));
         cart.add(db.disc2);
         cart.add(db.disc1);
         cart.sortPrice();

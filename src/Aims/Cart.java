@@ -25,11 +25,12 @@ public class Cart {
     public void getCart(){
         float currentPrice=0;
         StringBuilder message= new StringBuilder();
+        message.append("Cart: "+"\n");
         for (DigitalVideoDisc digitalVideoDisc : query) {
             message.append(digitalVideoDisc.getInfo()).append("\n");
             currentPrice+=digitalVideoDisc.getCost();
         }
-        System.out.println(message.toString());
+        System.out.println(message);
         System.out.println("Current cart price: "+currentPrice);
     }
     public void sortTitle(){

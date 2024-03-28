@@ -38,7 +38,7 @@ public class DigitalVideoDisc {
         return cost;
     }
     public String getInfo(){
-        return this.title+" "+this.director+"\n"+"Category: "+this.category+"\n"+"Length: "+this.length+"\n"+"Price: "+this.cost+"\n";
+        return this.title+" by "+this.director+"\n"+"Category: "+this.category+"\n"+"Length: "+this.length+"\n"+"Price: "+this.cost+"\n";
     }
 
     public String getCategory() {

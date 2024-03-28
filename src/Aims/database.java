@@ -49,9 +49,33 @@ public class database {
     );
     public String searchByKeyword(ArrayList<DigitalVideoDisc> data,String searchKeyword){
         StringBuilder message=new StringBuilder();
+        message.append("Search results: "+"\n");
         for (int i=0;i<data.size();i++){
             if(data.get(i).getTitle().contains(searchKeyword)){
                 message.append(data.get(i).getInfo());
+                message.append("\n");
+            }
+        }
+        return message.toString();
+    }
+    public String searchByCategory(ArrayList<DigitalVideoDisc> data,String searchKeyword){
+        StringBuilder message=new StringBuilder();
+        message.append("Search results: "+"\n");
+        for (int i=0;i<data.size();i++){
+            if(data.get(i).getCategory().contains(searchKeyword)){
+                message.append(data.get(i).getInfo());
+                message.append("\n");
+            }
+        }
+        return message.toString();
+    }
+    public String searchByPrice(ArrayList<DigitalVideoDisc> data,float min,float max){
+        StringBuilder message=new StringBuilder();
+        message.append("Search results: "+"\n");
+        for (int i=0;i<data.size();i++){
+            if(data.get(i).getCost()>=min && data.get(i).getCost()<=max){
+                message.append(data.get(i).getInfo());
+                message.append("\n");
             }
         }
         return message.toString();

@@ -27,12 +27,6 @@ public class DigitalVideoDisc {
 
         return this.title;
     }
-    public String play(){
-        if(this.length<=0){
-            return "DVD can't be played";
-        }
-        else return "lalala";
-    }
 
     public float getCost() {
         return cost;

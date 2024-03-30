@@ -47,7 +47,7 @@ public class database {
             326,
             7.99f
     );
-    public String searchByKeyword(ArrayList<DigitalVideoDisc> data,String searchKeyword){
+    public String searchByTitle(ArrayList<DigitalVideoDisc> data,String searchKeyword){
         StringBuilder message=new StringBuilder();
         message.append("Search results: "+"\n");
         for (int i=0;i<data.size();i++){

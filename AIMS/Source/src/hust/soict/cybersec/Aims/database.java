@@ -1,4 +1,4 @@
-package Aims;
+package hust.soict.cybersec.Aims;
 
 import java.util.ArrayList;
 

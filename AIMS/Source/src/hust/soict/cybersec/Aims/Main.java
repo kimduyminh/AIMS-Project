@@ -1,4 +1,4 @@
-package Aims;
+package hust.soict.cybersec.Aims;
 
 import java.util.ArrayList;
 
@@ -24,8 +24,8 @@ public class Main {
         System.out.println(db.searchByPrice(data,5,20));
 
         //add disc to cart
-        cart.add(db.disc2);
-        cart.add(db.disc1);
+        cart.addDigitalVideoDisc(db.disc2);
+        cart.addDigitalVideoDisc(db.disc1);
 
         //sorting in cart
         System.out.println("Sorting cart test: ");

@@ -1,4 +1,4 @@
-package Aims;
+package hust.soict.cybersec.Aims;
 
 import java.util.ArrayList;
 
@@ -8,18 +8,33 @@ public class Cart {
     private ArrayList<DigitalVideoDisc> query=new ArrayList<>();
 
     public Cart(){
+
         this.quantity=0;
     }
-    public void add(DigitalVideoDisc dvd){
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd){
         if (MAX_NUMBER_ORDERED-this.quantity>0){
-        query.add(dvd);
-        this.quantity++;
-        if (MAX_NUMBER_ORDERED-this.quantity<3){
-            System.out.println("Cart almost full");
+            query.add(dvd);
+            this.quantity++;
+            if (MAX_NUMBER_ORDERED-this.quantity<3){
+                System.out.println("Cart almost full");
         }
     }
         else{
             System.out.println("Cart is full, can't add items");
+        }
+    }
+    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList){
+        for (DigitalVideoDisc i:dvdList){
+            if (MAX_NUMBER_ORDERED-this.quantity>0){
+                query.add(i);
+                this.quantity++;
+                if (MAX_NUMBER_ORDERED-this.quantity<3){
+                    System.out.println("Cart almost full");
+                }
+            }
+            else{
+            System.out.println("Cart is full, can't add items");
+            }
         }
     }
     public void getCart(){
@@ -31,7 +46,7 @@ public class Cart {
             currentPrice+=digitalVideoDisc.getCost();
         }
         System.out.println(message);
-        System.out.println("Current cart price: "+currentPrice);
+        System.out.println("Total cart price: "+currentPrice);
     }
     public void sortTitle(){
         for (int i=0;i<query.size();i++){

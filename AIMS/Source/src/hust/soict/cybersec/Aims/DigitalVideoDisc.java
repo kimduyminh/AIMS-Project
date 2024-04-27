@@ -1,6 +1,4 @@
-package Aims;
-
-import java.util.ArrayList;
+package hust.soict.cybersec.Aims;
 
 public class DigitalVideoDisc {
     private String title;
@@ -14,6 +12,15 @@ public class DigitalVideoDisc {
         this.director="";
         this.length=0;
         this.cost=0;
+        nbDigitalVideoDiscs+=1;
+    }
+    public DigitalVideoDisc(String title){
+        this.title=title;
+        this.category="";
+        this.director="";
+        this.length=0;
+        this.cost=0;
+        nbDigitalVideoDiscs+=1;
     }
     public DigitalVideoDisc(String title,String category,String director,int length,float cost){
         this.title=title;
@@ -21,11 +28,16 @@ public class DigitalVideoDisc {
         this.director=director;
         this.length=length;
         this.cost=cost;
+        nbDigitalVideoDiscs+=1;
     }
 
     public String getTitle() {
 
         return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public float getCost() {
@@ -38,6 +50,9 @@ public class DigitalVideoDisc {
     public String getCategory() {
         return category;
     }
+    class nbDigitalVideoDiscs{
 
+    }
+    private static int nbDigitalVideoDiscs =0;
 
 }

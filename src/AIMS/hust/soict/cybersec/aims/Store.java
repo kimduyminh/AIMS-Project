@@ -1,11 +1,14 @@
-package hust.soict.cybersec.Aims;
+package AIMS.hust.soict.cybersec.aims;
+
+import AIMS.hust.soict.cybersec.aims.media.DigitalVideoDisc;
+import AIMS.hust.soict.cybersec.aims.media.media;
 
 import java.util.Arrays;
 
 public class Store {
-    private DigitalVideoDisc[] itemsInStore;
-    private DigitalVideoDisc[] temp1;
-    private DigitalVideoDisc[] temp2;
+    private media[] itemsInStore;
+    private media[] temp1;
+    private media[] temp2;
     public void addDVD(DigitalVideoDisc dvd){
         itemsInStore[itemsInStore.length]=dvd;
     }

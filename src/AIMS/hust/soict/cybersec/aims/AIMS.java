@@ -1,7 +1,6 @@
 package AIMS.hust.soict.cybersec.aims;
 
-import AIMS.hust.soict.cybersec.aims.cart.cart;
-import AIMS.hust.soict.cybersec.aims.media.media;
+import AIMS.hust.soict.cybersec.aims.cart.Cart;
 
 import java.util.Scanner;
 
@@ -74,7 +73,7 @@ public class AIMS {
 
     }
     public static void main(String[] args) {
-        cart cart=new cart();
+        Cart cart=new Cart();
         showMenu();
     }
 }

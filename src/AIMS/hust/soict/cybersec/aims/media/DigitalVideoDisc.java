@@ -1,5 +1,7 @@
 package AIMS.hust.soict.cybersec.aims.media;
 
+import AIMS.hust.soict.cybersec.aims.PlayerException;
+
 import java.util.List;
 
 public class DigitalVideoDisc extends Disc implements Playable{
@@ -71,8 +73,13 @@ public class DigitalVideoDisc extends Disc implements Playable{
     public boolean isMatch(String title){
         return this.title.equals(title);
     }
-    public void play(){
-        System.out.println("Playing DVD: " + this.getTitle());
-        System.out.println("DVD length: " + this.getLength());
+    public void play() throws PlayerException {
+        if (this.getLength() <= 0) {
+            System.err.println("ERROR: Track length is non-positive");
+            throw new PlayerException("Track length is non-positive");
+        } else {
+            System.out.println("Playing Track: " + this.getTitle());
+            System.out.println("Track length: " + this.getLength());
+        }
     }
 }

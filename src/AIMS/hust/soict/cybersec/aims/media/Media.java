@@ -1,6 +1,6 @@
 package AIMS.hust.soict.cybersec.aims.media;
 
-public abstract class media {
+public abstract class Media {
     private int id;
     private String title;
     private String category;
@@ -37,29 +37,29 @@ public abstract class media {
     public void setId(int id) {
         this.id = id;
     }
-    public media(float cost){
+    public Media(float cost){
         this.cost = cost;
     }
-    public media(int id,String title,String category,float cost){
+    public Media(int id, String title, String category, float cost){
         this.cost = cost;
         this.title = title;
         this.category = category;
         this.id=id;
     }
-    public media(String title){
+    public Media(String title){
         this.title=title;
     }
-    public media(String title,float cost,String category){
+    public Media(String title, float cost, String category){
         this.cost = cost;
         this.category = category;
         this.title=title;
     }
-    public media(){}
+    public Media(){}
 
     public String getInfo(){
         return "";
     }
-    public boolean equals(media media){
+    public boolean equals(Media media){
         return this.title.equals(media.getTitle());
     }
 }

@@ -3,7 +3,7 @@ package AIMS.hust.soict.cybersec.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disc extends media {
+public class Disc extends Media {
     private int id;
     private String title;
     private String category;
